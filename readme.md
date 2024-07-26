@@ -4,7 +4,9 @@
 
 ## Instructions
 
-[] Clone the Repository [] Install the packages (npm install) [] Run the code
+- [ ] Clone the Repository
+- [ ] Install the packages (npm install)
+- [ ] Run the code
 
 ## Dependencies
 
