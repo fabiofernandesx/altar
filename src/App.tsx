@@ -1,15 +1,18 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { GridPage } from './pages/grid-page'
 import { Payments } from './pages/payments'
+import { io } from 'socket.io-client'
+
+const socket = io('http://localhost:3000')
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <GridPage />,
+    element: <GridPage socket={socket} />,
   },
   {
     path: '/payments',
-    element: <Payments />,
+    element: <Payments socket={socket} />,
   },
 ])
 export function App() {

@@ -4,3 +4,9 @@ export type Payment = {
   code: string
   grid: string
 }
+
+export type GridData = {
+  array: string[]
+  code: string
+  bias: string
+}
