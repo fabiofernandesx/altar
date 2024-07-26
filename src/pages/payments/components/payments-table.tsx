@@ -1,4 +1,4 @@
-import { Payment } from './types'
+import { Payment } from '../../../lib/types'
 
 interface PaymentsTableProps {
   paymentList: Payment[]

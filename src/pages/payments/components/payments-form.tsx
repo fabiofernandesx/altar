@@ -26,11 +26,11 @@ export const PaymentsForm = ({ onSubmit }: PaymentsFormProps) => {
     <div>
       <form onSubmit={handleSubmit(handleSubmitForm)} className='flex gap-4  justify-start'>
         <div className='flex flex-col gap-1 h-16 w-26'>
-          <label htmlFor='payment'>Payment</label>
+          <label>Payment</label>
           <input {...register('payment')} type='text' name='payment' placeholder='Payment' className={`${errors.payment ? 'border-2 border-red-600 bg-red-200' : ''} w-full py-1 px-2 h-10 text-zinc-900`} />
         </div>
         <div className='flex flex-col gap-1 h-16 w-20'>
-          <label htmlFor='amount'>Amount</label>
+          <label>Amount</label>
           <input {...register('amount')} type='text' name='amount' placeholder='Amount' className={`${errors.amount ? 'border-2 border-red-600 bg-red-200' : ''} w-full py-1 px-2 h-10 text-zinc-900`} />
         </div>
         <button type='submit' className='flex gap-2 mt-6 bg-green-600 py-1 px-4 items-center justify-center text-sm  h-10 text-zinc-100 hover:bg-green-700'>

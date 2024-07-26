@@ -1,12 +1,18 @@
+import { Socket } from 'socket.io-client'
 import { useStore } from '../../../store'
+import { DefaultEventsMap } from '@socket.io/component-emitter'
 
-export const BiasField = () => {
+interface Props {
+  socket: Socket<DefaultEventsMap, DefaultEventsMap>
+}
+export const BiasField = ({ socket }: Props) => {
   const { bias, isBiasFrozen, setBias, setIsBiasFrozen } = useStore((state) => state)
   const Filter = (bias: string) => {
     if (!bias.match(/[A-Z]/g) || bias.length > 1) {
       setBias('')
       return
     }
+    socket.emit('bias', bias)
     setBias(bias)
     setIsBiasFrozen(true)
     setTimeout(() => {
